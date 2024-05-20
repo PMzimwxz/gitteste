@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Número</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: aqua;
+        }
+        div{
+            margin: auto;
+            text-align: center;
+            background-color: aquamarine;
+            width: 675px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Qual o maior número</h1>
+        <form action-="">
+            Digite o primeiro número a: <input type="text" id="numero1"><br><br>
+            Digite o segundo número b: <input type="text" id="numero2"><br><br>
+            Digite o terceiro número c: <input type="text" id="numero3"><br><br>
+            <p id="res"></p>
+            <button onclick="calcular()">Calcular</button>
+        </form>
+    </div>
+    <script>
+        function calcular(){
+            n1 = +document.getElementById("numero1").value
+            n2 = +document.getElementById("numero2").value
+            n3 = +document.getElementById("numero3").value
+            if((n1 > n2) && (n2 > n3)){
+                //document.getElementById("res").innerHTML = `O número ${n1} é o maior`
+                alert("a")
+            }else if((n1 < n2) && (n2 > n3)){
+                //document.getElementById("res").innerHTML = `O número ${n2} é o maior`
+                alert("b")
+            }else{
+                //document.getElementById("res").innerHTML = `O número ${n3} é o maior`
+                alert("c")
+            }
+        }
+    </script>
+</body>
+</html>

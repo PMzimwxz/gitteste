@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ano bissexto</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(0, 255, 242);
+        }
+        div{
+            margin: auto;
+            text-align: center;
+            background-color: rgb(255, 255, 255);
+            width: 675px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1> Insira o ano que deseja </h1> <br>
+        Digite aqui o ano <input type="text" id="ano">
+        <button onclick="calcular()">calcular</button>
+        <p id="res"></p>
+    </div>
+    <script>
+        function calcular(){
+            ano = document.getElementById("ano").value
+            if (ano % 4 == 0) {
+                document.getElementById("res").innerHTML = `O ano ${ano} é bissexto!`
+            }else if (ano % 400 == 0) {
+                document.getElementById("res").innerHTML = `O ano ${ano} é bissexto!`
+            }else{
+                document.getElementById("res").innerHTML = `O ano ${ano} não é bissexto!`
+            }
+        }
+    </script>
+</body>
+</html>

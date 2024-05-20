@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <style>
+
+        body{
+            display:inline-block;
+        }
+        .content{
+            background-color: aliceblue;
+        border: 1px solid #000000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+        border-radius: 15px;
+        padding: 10px; 
+        gap: 20px;
+
+        }
+        .content {
+        font-weight: bold;
+        text-decoration: none;
+        background-color: rgb(240, 163, 178);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+
+        <button id="#vermelho" onclick="escolher_fundo(1)">vermelho</button>    
+        <button id="#azul" onclick="escolher_fundo(2)">verde</button>    
+        <button onclick="escolher_fundo(3)" >amarelo</button>    
+        <button onclick="escolher_fundo(4)">azul</button>    
+
+    </div>
+    <script>
+        function escolher_fundo(A){
+            if ( A==1 ){
+                document.body.style.backgroundColor="crimson"
+            }else if
+                ( A == 2){
+                document.body.style.backgroundColor="green"
+                }else if
+                ( A == 3){
+                document.body.style.backgroundColor="yellow"
+        }else if
+                ( A == 4){
+                document.body.style.backgroundColor="blue"
+            
+        }
+        }
+
+    </script>
+</body>
+</html>

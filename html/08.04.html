@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário e Horas</title>
+    <Style>
+        body{
+            background-color: cadetblue;
+        }
+        butto{
+            background-color: color-mix(in srgb, color percentage, color percentage);
+        }
+    </Style>
+</head>
+<body onload="time()">
+
+    <p id="data"></p><br>
+    <p id="hora"></p>
+
+    <script>
+        const dia_semana = ["domingo","segunda","terça","quarta"," quinta", "sexta","sabado"]
+        
+        const mes_do_ano = ["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"]
+
+function time(){
+        let data = new Date()
+        h = data.getHours()
+        m = data.getMinutes()
+        s = data.getSeconds()
+
+        semana = dia_semana[data.getDay()]
+        mm = mes_do_ano[data.getMonth()]
+        dd = data.getDate()
+        yy = data.getFullYear() 
+
+        document.getElementById("data").innerHTML = `Data -> Hoje é ${dd} de ${mm} de ${yy}`
+        document.getElementById("hora").innerHTML = ` hora -> o horario e ${h}.${m}.${s}`; setTimeout('time()',1000)
+
+        document.getElementById('demo1').innerHTML = `o numero de dias da semana ${dia_semana.length}`
+        document.getElementById('demo2').innerHTML = `o mes do ano ${mes_do_ano.length}`
+    }
+    console.log()
+    </script>
+
+</body>
+</html>

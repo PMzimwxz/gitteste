@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        body{
+          
+  background: linear-gradient(90deg,rgb(0, 166, 255),rgb(255, 0, 0),#ffffff);
+        }
+        div{
+            border-radius: 300px;
+            flex-direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: auto;
+            border: #ff5050;
+            display:flexbox;
+        }
+        button{
+            border-radius: 90px;
+            color: rgb(0, 0, 0);
+            background: linear-gradient(90deg,rgb(0, 166, 255),rgb(255, 0, 38),#ffffff);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            left: 90px;
+            right: 0px;
+        }
+        input{
+            border-radius: 90px;
+            background-color: rgb(255, 145, 0);
+            align-items:center;
+            display: flex;
+            padding: 0%;
+            justify-content: center;
+            background: linear-gradient(90deg,rgb(0, 166, 255),rgb(255, 201, 209),#ff0000);
+
+        }
+        h1{
+            left: auto;
+            width: auto;
+            padding: auto;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            color: linear-gradient(90deg,rgb(0, 166, 255),rgb(255, 201, 209),#ff0000);
+        }
+
+    </style>
+</head>
+<body onclick="juros()">
+    <div id="calc">
+
+        <h1 >calcule o quanto pagara de juros</h1>
+        <input type="text" name="valor" id="valor" >
+        <input type="text" name="tempo" id="time">
+        <input type="text" name="juros" id="juros">
+    </div>
+    
+    
+    <div>
+
+        <button onclick="juros()">enviar</button>
+
+    </div>
+    <script>
+function juros(){
+
+    const valor = document.getElementById("valor").value
+    const time = document.getElementById("tempo").value
+    const free= document.getElementById(`${total}`).value
+    const total = valor*(1 + free)**time
+
+    document.getElementById("free").innerHTML=(`seu valor com juros${total} `)
+    console.log(`${total}`)
+}
+    </script>
+
+</body>
+</html>

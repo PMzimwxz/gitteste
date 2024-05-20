@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let nascimento = prompt("digite sua data de nascimento")
+let titulor = prompt("vc tem titulo?")
+idade = 2024 - nascimento
+if ((idade <=16) && (titulor == "sim")) {
+    document.write("pode vota !")
+}else if((idade<=16) && (titulor)) {
+    document.write("obrigatorio vota ")
+}else if ((idade >=16) && (titulor == "sim")) {
+    document.write("nao pode votar")
+}else if ((idade <=16)){
+    document.write("nao pode vota")
+}else if ((idade <= 18) && (titulor == "sim"))
+    document.write("obrigatorio vote")
+
+    </script>
+</body>
+</html>

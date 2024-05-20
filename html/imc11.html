@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+body {
+    background-color: rgb(28, 176, 65);
+    color: rgb(0, 0, 0);
+
+} button {
+    align-items: center; 
+    border-radius: 20px;
+    margin: auto;
+    gap: 20px;
+    width: 100px;
+    background-color:blue ;
+    color: chartreuse;
+}form{
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}::content{
+    color: aquamarine;
+}
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Calcule seu índice de massa corporal (IMC)</h1>
+        <h2>Preencha os campos abaixo:</h2>
+         <form action="">
+          <pre>
+            <code>
+    Informe seu peso: <input type="text"id="peso" placeholder="peso" >I
+    Informe sua altura: <input tipe="numero"id="altura"placeholder="altura">
+             </code>
+            </pre>
+           </form>
+    </div>
+    <button onclick="calcula_imc()">envia</button>
+    <p id="resultado">
+<script>
+        function calcula_imc(){
+            let peso = +document.getElementById("pesp").value
+            let altura = +document.getElementById("altura").value
+           let imc = peso / (altura**2)
+             if (imc <= 18.5){
+                document.getElementById("resultado").innerHTML = ('seu imc e ${imc.poFixed(2), voce esta abaixo do peso}')
+            } else if ((imc >= 18.5 )){
+                document.getElementById("resultado").innerHTML = ('seu imc e ${imc.poFixed(2), voce esta abaixo peso}')
+            } else if ((imc >= 18.5 )&&(imc <= 24.6)) {
+                document.getElementById("RESULTADO").innerHTML = ('seu imc e ${imc.poFixed(2), voce esta normal no peso}')
+            } else if((imc >= 25.0  )&&(imc <= 29.9)){
+                document.getElementById("resultado").innerHTML = ('seu imc e &{imc.poFixed(3), voce esta acima do peso}')
+            }
+        }
+    </script>
+</body>
+</html>
